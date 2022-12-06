@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D7D7D7"
+    tools:context=".JogoMatematica">
+
+    <TextView
+        android:id="@+id/tV_pontos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/kenvector_future"
+        android:text="Pontos"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tV_numPontos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/kenvector_future"
+        android:text="100"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/iV_meme"
+        app:layout_constraintEnd_toEndOf="@+id/tV_pontos"
+        app:layout_constraintStart_toStartOf="@+id/tV_pontos"
+        app:layout_constraintTop_toBottomOf="@+id/tV_pontos" />
+
+    <TextView
+        android:id="@+id/tV_vidas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/kenvector_future"
+        android:text="Vidas"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tV_dificuldade"
+        app:layout_constraintStart_toEndOf="@+id/tV_pontos"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tV_numVidas"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/kenvector_future"
+        android:text="3"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tV_vidas"
+        app:layout_constraintHorizontal_bias="0.652"
+        app:layout_constraintStart_toStartOf="@+id/tV_vidas"
+        app:layout_constraintTop_toBottomOf="@+id/tV_vidas" />
+
+    <TextView
+        android:id="@+id/tV_dificuldade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/kenvector_future"
+        android:text="Dificuldade"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/s_dificuldade"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/tV_dificuldade"
+        app:layout_constraintStart_toStartOf="@+id/tV_dificuldade"
+        app:layout_constraintTop_toBottomOf="@+id/tV_dificuldade" />
+
+    <ImageView
+        android:id="@+id/iV_meme"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/s_dificuldade"
+        app:srcCompat="@drawable/neutral" />
+
+    <TextView
+        android:id="@+id/tV_numero1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:fontFamily="@font/kenvector_future"
+        android:text="100"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tV_operador"
+        app:layout_constraintEnd_toStartOf="@+id/tV_operador"
+        app:layout_constraintTop_toTopOf="@+id/tV_operador" />
+
+    <TextView
+        android:id="@+id/tV_operador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/kenvector_future"
+        android:text="+"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/iV_btn_opcao1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iV_meme" />
+
+    <TextView
+        android:id="@+id/tV_numero2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:fontFamily="@font/kenvector_future"
+        android:text="100"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tV_operador"
+        app:layout_constraintStart_toEndOf="@+id/tV_operador"
+        app:layout_constraintTop_toTopOf="@+id/tV_operador" />
+
+    <ImageView
+        android:id="@+id/iV_btn_opcao1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/iV_btn_opcao2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/blue_button00" />
+
+    <TextView
+        android:id="@+id/tV_btn_opcao1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kenvector_future"
+        android:text="Opção 1"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iV_btn_opcao1"
+        app:layout_constraintEnd_toEndOf="@+id/iV_btn_opcao1"
+        app:layout_constraintStart_toStartOf="@+id/iV_btn_opcao1"
+        app:layout_constraintTop_toTopOf="@+id/iV_btn_opcao1" />
+
+    <ImageView
+        android:id="@+id/iV_btn_opcao2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/iV_btn_opcao3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/green_button00" />
+
+    <TextView
+        android:id="@+id/tV_btn_opcao2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kenvector_future"
+        android:text="Opção 2"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iV_btn_opcao2"
+        app:layout_constraintEnd_toEndOf="@+id/iV_btn_opcao2"
+        app:layout_constraintStart_toStartOf="@+id/iV_btn_opcao2"
+        app:layout_constraintTop_toTopOf="@+id/iV_btn_opcao2" />
+
+    <ImageView
+        android:id="@+id/iV_btn_opcao3"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/iV_btn_opcao4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/yellow_button00" />
+
+    <TextView
+        android:id="@+id/tV_btn_opcao3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kenvector_future"
+        android:text="Opção 3"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iV_btn_opcao3"
+        app:layout_constraintEnd_toEndOf="@+id/iV_btn_opcao3"
+        app:layout_constraintStart_toStartOf="@+id/iV_btn_opcao3"
+        app:layout_constraintTop_toTopOf="@+id/iV_btn_opcao3" />
+
+    <ImageView
+        android:id="@+id/iV_btn_opcao4"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/red_button11" />
+
+    <TextView
+        android:id="@+id/tV_btn_opcao4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kenvector_future"
+        android:text="Opção 4"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iV_btn_opcao4"
+        app:layout_constraintEnd_toEndOf="@+id/iV_btn_opcao4"
+        app:layout_constraintStart_toStartOf="@+id/iV_btn_opcao4"
+        app:layout_constraintTop_toTopOf="@+id/iV_btn_opcao4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
